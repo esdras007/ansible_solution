@@ -3,3 +3,4 @@ To run this Ansible playbook:
 - download both files (inventory and playbook)
 - execute below command: 
   #ansible-playbook -i inventory.yml playbook.yml
+- check the responses of the both ping
