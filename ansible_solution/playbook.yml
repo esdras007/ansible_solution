@@ -1,0 +1,5 @@
+---
+- hosts: sites
+  tasks:
+  - name: ping sites
+    ping:
