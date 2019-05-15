@@ -1,5 +1,10 @@
----
-- hosts: sites
+- name: a playbook that runs on the ansible host
+  hosts: 127.0.0.1
+  connection: local
   tasks:
-  - name: ping sites
-    ping:
+  - name: include vars
+    include_vars: /Users/Amos/development/ingenico/ansible_solution2/var_file.yml
+  - name: checking google site
+    shell: "nc -v {{ google }} {{ port }}"
+  - name: checking mysite site
+    shell: "nc -v {{ mysite }} {{ port }}" 
